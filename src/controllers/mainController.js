@@ -1,5 +1,3 @@
-const path = require('path');
-
 const mainController = {
     index: (req, res) => res.render('home'),
     
@@ -10,4 +8,4 @@ const mainController = {
     }),
 }
 
-module.exports = mainController
+module.exports = mainController;

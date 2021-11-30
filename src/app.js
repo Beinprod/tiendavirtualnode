@@ -9,20 +9,22 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 
 // Para capturar y configurar la informacion que viene por post -- Form->Obj Literal->Json
-app.use(express.urlencoded({extended: false}))
-app.use(express.json())
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 
 // Establecer vistas
-app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, '/views'))
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views'));
 
 
 // Routing
-const mainRouter = require('./routers/mainRouter')
+const mainRouter = require('./routers/mainRouter');
+const rolesRouter = require('./routers/rolesRouter');
 
 
-app.use('/', mainRouter)
+app.use('/', mainRouter);
+app.use('/roles', rolesRouter);
 
 
 // Pagina no encontrada
