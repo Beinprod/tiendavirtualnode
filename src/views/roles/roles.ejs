@@ -1,10 +1,12 @@
 
 <%- include('../template/headerAdmin.ejs') %>
+<%- include('../template/modals/modalRoles.ejs') %>
 <main class="app-content">
   <div class="app-title">
     <div>
         <h1>
           <i class="fas fa-user-tag"></i> <%= page_title %> <small>Tienda Virtual</small>
+          <button class="btn btn-primary" type="button" onclick="openModal();"><i class="fas fa-plus-circle"></i> Nuevo</button>
         </h1>
     </div>
     <ul class="app-breadcrumb breadcrumb">
